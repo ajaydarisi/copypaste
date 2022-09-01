@@ -1,84 +1,129 @@
 .footerPage {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    /* background-color: yellow; */
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* background-color: yellow; */
 }
 
 .writeMessage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    height: 100%;
-    /* background-color: grey; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  /* background-color: grey; */
 }
 
 .writeMessageInput {
-    all: unset;
-    font-size: 13px;
-    width: 95%;
-    height: 60%;
-    padding-left: 15px;
-    background-color: #fff;
-    border: 1px solid #707070;
-    border-radius: 5px;
+  all: unset;
+  font-size: 13px;
+  width: 95%;
+  height: 60%;
+  padding-left: 15px;
+  background-color: #fff;
+  border: 1px solid #707070;
+  border-radius: 5px;
 }
 
 .uploadDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10%;
-    height: 100%;
-    /* background-color: violet; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 100%;
+  /* background-color: violet; */
 }
 
 .upfile {
-    display: none;
-  }
+  display: none;
+}
 
 .upload {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 40px;
-    background: #f5b301;
-    cursor: pointer;
-    /* padding: 13px 50px; */
-    border-radius: 100px;
-  }
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  background: #f5b301;
+  cursor: pointer;
+  /* padding: 13px 50px; */
+  border-radius: 100px;
+}
 
-  .uptext {
-    cursor: pointer;
-    background-color: #0A56D0;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-  }
-  
-  .uplogo {
-    display: none;
-    height: 90%;
-  }
-   
+.uptext {
+  cursor: pointer;
+  background-color: #0A56D0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.uplogo {
+  display: none;
+  height: 90%;
+}
+
 
 .sendDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10%;
-    height: 100%;
-    /* background-color: brown; */
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .send {
-    background-color: #198039;
-    color: #fff;
-    padding: 10px 25px;
-    border-radius: 25px;
-    cursor: pointer;
+  background-color: #198039;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.sendLogo {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #198039;
+  color: #fff;
+  padding: 2px 12px 7px 13px;
+  border-radius: 100%;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .writeMessage {
+    width: 87%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .writeMessage {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .writeMessage {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .send {
+    display: none;
+  }
+
+  .sendLogo {
+    display: block
+  }
 }

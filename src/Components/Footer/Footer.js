@@ -4,19 +4,21 @@ import { doc, setDoc } from "firebase/firestore";
 import "./Styles/footer.css";
 
 function Footer() {
-  const [send,setSend] = useState("Send");
-  const [message,setMessage] = useState("");
+  const [send, setSend] = useState("Send");
+  const [message, setMessage] = useState("");
 
-  const sendMessage = async() => {
-    setSend("Sending");
-    console.log();
-    await setDoc(doc(db, "messages", String(Date.now())), {
-      message: message
-    }).then(() => {
-      setSend("Send");
-      setMessage("");
-    });
-  }
+  const sendMessage = async () => {
+    if (message) {
+      setSend("Sending");
+      console.log();
+      await setDoc(doc(db, "messages", String(Date.now())), {
+        message: message,
+      }).then(() => {
+        setSend("Send");
+        setMessage("");
+      });
+    }
+  };
 
   const handleKeypress = (e) => {
     if (e.code === "Enter") {
@@ -47,9 +49,14 @@ function Footer() {
           </span>
         </label>
       </div> */}
-      <div className="sendDiv">
-        <span className="send" onClick={sendMessage}>{send}</span>
-      </div>
+      <button className="sendDiv">
+        <span className="send" onClick={sendMessage}>
+          {send}
+        </span>
+        <span className="sendLogo" onClick={sendMessage}>
+          &gt;
+        </span>
+      </button>
     </div>
   );
 }
