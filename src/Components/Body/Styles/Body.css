@@ -1,0 +1,43 @@
+.bodyDiv {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding-left: 2%;
+    justify-content: flex-end;
+    /* background-color: blue; */
+}
+
+.messagesDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 95%;
+}
+
+.message {
+    background-color: #EEEEF1;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.refreshDiv {
+    display: flex;
+    width: 6%;
+    height: 5%;
+    padding: 5px 10px;
+    cursor: pointer;
+    /* background-color: yellow; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.refreshIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.refreshText {
+    font-weight: 500;
+    color: #0A56D0;
+}

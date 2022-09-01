@@ -1,0 +1,84 @@
+.footerPage {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+
+.writeMessage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    /* background-color: grey; */
+}
+
+.writeMessageInput {
+    all: unset;
+    font-size: 13px;
+    width: 95%;
+    height: 60%;
+    padding-left: 15px;
+    background-color: #fff;
+    border: 1px solid #707070;
+    border-radius: 5px;
+}
+
+.uploadDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+    /* background-color: violet; */
+}
+
+.upfile {
+    display: none;
+  }
+
+.upload {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background: #f5b301;
+    cursor: pointer;
+    /* padding: 13px 50px; */
+    border-radius: 100px;
+  }
+
+  .uptext {
+    cursor: pointer;
+    background-color: #0A56D0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .uplogo {
+    display: none;
+    height: 90%;
+  }
+   
+
+.sendDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+    /* background-color: brown; */
+}
+
+.send {
+    background-color: #198039;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
