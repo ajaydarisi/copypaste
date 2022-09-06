@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import { db, storage } from "../Database/firebase.js";
 import { doc, setDoc } from "firebase/firestore";
 import "./Styles/footer.css";
+import { collection, getDocs } from "firebase/firestore";
+
 
 function Footer() {
   const [send, setSend] = useState("Send");
   const [message, setMessage] = useState("");
+  var [messages, setMessages] = useState([]);
+
 
   const sendMessage = async () => {
     if (message) {
@@ -18,6 +22,12 @@ function Footer() {
         setMessage("");
       });
     }
+    var temp = [];
+    const querySnapshot = await getDocs(collection(db, "messages"));
+    querySnapshot.forEach((doc) => {
+      temp.push(doc.data());
+    });
+    setMessages(temp);
   };
 
   const handleKeypress = (e) => {

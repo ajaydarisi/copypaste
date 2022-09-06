@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Styles/Body.css";
 import { collection, getDocs } from "firebase/firestore";
 import { db, storage } from "../Database/firebase.js";
 
+
 function Body() {
   var [messages, setMessages] = useState([]);
   var [refresh, setRefresh] = useState("Refresh");
+
+  useEffect(()=>{
+    reload();
+  },[])
 
   const reload = async () => {
     console.log("Refreshing");
