@@ -11,6 +11,7 @@
 .messagesDiv {
     display: flex;
     flex-direction: column;
+    overflow: auto;
     gap: 7px;
     width: 95%;
 }
